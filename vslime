@@ -1,0 +1,16 @@
+#!/bin/sh
+
+tmux new -d -s rubysession
+tmux split-window -t rubysession
+tmux send-keys -t rubysession 'pry' C-m
+tmux send-keys -t rubysession C-l
+tmux select-pane -t rubysession:0.0
+tmux send-keys -t rubysession 'vim' C-m
+sleep 6
+tmux send-keys -t rubysession ':setf ruby' C-m
+tmux send-keys -t rubysession ':colo darkblue' C-m
+sleep 2
+tmux send-keys -t rubysession C-c v
+tmux send-keys -t rubysession C-m
+tmux send-keys -t rubysession '0.1' C-m
+tmux attach-session -t rubysession
