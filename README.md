@@ -1,3 +1,6 @@
+This project is no longer being maintained. Most of my needs for interactive
+experimentation are now met by [hsandbox](http://labix.org/hsandbox).
+
 vslime
 ======
 
